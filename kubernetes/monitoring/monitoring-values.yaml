@@ -1,0 +1,25 @@
+grafana:
+  adminPassword: "12345678"   
+  persistence:
+    enabled: true
+    size: 10Gi
+  service:
+    type: NodePort   # or NodePort if you prefer
+
+prometheus:
+  prometheusSpec:
+    retention: 7d
+    retentionSize: 50GB
+    storageSpec:
+      volumeClaimTemplate:
+        spec:
+          accessModes: ["ReadWriteOnce"]
+          resources:
+            requests:
+              storage: 50Gi
+    serviceMonitorSelectorNilUsesHelmValues: false   
+alertmanager:
+  enabled: true
+  persistence:
+    enabled: true
+    size: 10Gi
