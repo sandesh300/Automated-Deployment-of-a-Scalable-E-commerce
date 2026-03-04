@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: sandesh030/ecommerce-frontend:v1.1
+        image: sandesh030/ecommerce-frontend:v1.0
         ports:
         - containerPort: 80
         resources:

@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: sandesh030/ecommerce-backend:v1.2
+        image: sandesh030/ecommerce-backend:v1.0
         ports:
         - containerPort: 8080
         envFrom:
