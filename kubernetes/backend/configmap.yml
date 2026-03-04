@@ -5,7 +5,7 @@ metadata:
   namespace: ecommerce-prod
 data:
   SPRING_PROFILES_ACTIVE: prod
-  SPRING_DATASOURCE_URL: jdbc:mysql://ecommerce-mysql-primary.ch2kskk2c7ut.eu-west-1.rds.amazonaws.com:3306/ecommercedb?useSSL=true&serverTimezone=UTC
+  SPRING_DATASOURCE_URL: jdbc:mysql://ecommerce-mysql-primary.c7w02cuaiejs.eu-west-1.rds.amazonaws.com:3306/ecommercedb?useSSL=true&serverTimezone=UTC
   SPRING_DATASOURCE_USERNAME: admin
   MYSQL_DATABASE: ecommercedb
   SERVER_PORT: "8080"
