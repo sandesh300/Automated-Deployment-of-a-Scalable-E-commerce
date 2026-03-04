@@ -10,4 +10,4 @@ rds_allocated_storage = 20
 db_name              = "ecommercedb"
 db_username          = "admin"
 db_password          = "YourSuperSecretPassword123!"
-backup_bucket_name   = "ecommerce-backups-prod-1020"
+backup_bucket_name   = "ecommerce-backups-prod-10203040"
