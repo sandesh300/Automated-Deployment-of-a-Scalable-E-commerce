@@ -1,5 +1,4 @@
 #!/bin/bash
-# scripts/blue-green-switch.sh
 
 CURRENT=$(kubectl get svc backend-service -n ecommerce-prod -o jsonpath='{.spec.selector.slot}')
 echo "Current active slot: $CURRENT"
