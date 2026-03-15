@@ -24,9 +24,7 @@ The pipeline integrates **Jenkins** for CI, **ArgoCD** for GitOps CD, **Terrafor
 
 ---
 
-## 🏗 Architecture Overview
-
-![Architecture Diagram](docs/architecture.png) *(create a diagram or omit)*
+## 🏗 Architecture Overview 
 
 - **AWS** – EKS (Kubernetes), RDS MySQL (Multi‑AZ + read replica), S3 (backups), IAM, ALB, Route53.
 - **CI** – Jenkins pipeline with SonarQube, Trivy, OWASP, Docker build & push.
@@ -143,6 +141,9 @@ The Jenkins pipeline (`Jenkinsfile`) automates:
    Trigger a build with parameters `IMAGE_TAG` (e.g., `v1.0`) and `DEPLOY_SLOT` (`blue` or `green`).  
    The pipeline will push images and update the manifests in Git.
 
+![alt text](<Screenshot (138).png>)
+![alt text](<Screenshot (147).png>) 
+
 ### ArgoCD GitOps CD
 
 ArgoCD continuously syncs the Kubernetes manifests from the Git repository to the EKS cluster.
@@ -168,6 +169,9 @@ ArgoCD continuously syncs the Kubernetes manifests from the Git repository to th
    argocd login <argocd-server-ip> --username admin
    argocd repo add https://github.com/your-org/ecommerce-devsecops.git --username your-username --password your-token
    ```
+![alt text](<Screenshot (143).png>) 
+![alt text](<Screenshot (140).png>) 
+![alt text](<Screenshot (141).png>)
 
 5. **Create the Application**  
    Apply the `argocd/application.yml` manifest:
